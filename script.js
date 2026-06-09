@@ -28,14 +28,14 @@ function showAge(age){
     console.log(age);
 }
 
-function add(a , b){
-    return a + b;
-}
- greet ();
- showAge(20);
+//function add(a , b){
+  //  return a + b;
+//}
+ //greet ();
+ //showAge(20);
 
- let result = add(10 , 5);
- console.log(result);
+ //let result = add(10 , 5);
+ //console.log(result);
 
  function multiply(a, b){
     return a * b};
@@ -95,14 +95,14 @@ for(let i = 1; i <=20; i+=2){
 console.log(i);
 }
  
-let marks = [90, 40 , 75, 32];
-for(let i=0; i < marks.length; i++){
- if(marks [i]<= 50){
-    console.log("Pass");
- } else{
-    console.log("Fail");
- }
-}
+//let marks = [90, 40 , 75, 32];
+//for(let i=0; i < marks.length; i++){
+ //if(marks [i]<= 50){
+   // console.log("Pass");
+ //} else{
+   // console.log("Fail");
+ //}
+//}
 //objects
 let student = {
     name: "Ariba",
@@ -111,6 +111,7 @@ let student = {
 };
 console.log(student.name);
 
+//Array of object
 let students = [
     {
         name: "Ariba",
@@ -122,3 +123,71 @@ let students = [
         }
 ];
 console.log(students);
+
+// Promise 
+
+let myPromise = new Promise((resolve,reject)=>{
+    let success = true;
+    if(success){
+        resolve("data fatched successfully");
+    }else{
+     reject("something went wrong")
+    }
+});
+
+myPromise
+.then((result)=>{
+    console.log(result);
+})
+.catch((error)=>{
+    console.log(error);   
+});
+
+let promise = new Promise((resolve,reject)=>{
+
+setTimeout(()=>
+{
+    resolve("Transactiom Successfully");
+}, 2000);
+});
+
+promise.then((data)=>{
+    console.log(data);
+});
+
+//async/await
+function getMarks(){
+    return new Promise((resolve)=>{
+setTimeout(()=>{
+    resolve(85);
+}, 3000);
+
+})
+}
+async function showMarks() {
+    let marks = await getMarks();
+    console.log(marks);
+}
+
+showMarks();
+
+//ForEach
+//let marks = [50 , 85 , 33 , 78]
+//marks.forEach((marks)=>{
+//console.log(marks);
+//});
+//Map
+let users =["Fatima", "Maida", "Sania"]
+let result = users.map((users)=>
+{
+    return "Added" + users;
+});
+console.log(result);
+//filter
+let marks = [50 , 85 , 33 , 78]
+let passed = marks.filter((marks)=>{
+return marks >= 50;
+});
+
+console.log(passed);
+
