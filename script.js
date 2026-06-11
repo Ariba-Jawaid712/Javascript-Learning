@@ -1,4 +1,4 @@
-//let age = 20;
+/*let age = 20;
 
 //console.log(age);
 
@@ -189,5 +189,5 @@ let passed = marks.filter((marks)=>{
 return marks >= 50;
 });
 
-console.log(passed);
+console.log(passed);*/
 
